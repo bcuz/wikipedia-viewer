@@ -1,5 +1,7 @@
 $(function() {
 
+    // need to acct for search not having a result
+
     var getData = function(title) {
     $.ajax({
     type: 'GET',
@@ -13,19 +15,6 @@ $(function() {
 })
 
     }
-
-  //   var queryData = {
-  //   action: "query",
-  //   titles: "warner",
-  //   format: "json"
-  // };
-
-//     .done(function(result){
-//     console.log(result);
-// })
-//   .fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
-//     // console.log(jqXHR);
-//   });
 
     getData("kurt warner")
 });
