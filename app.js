@@ -5,6 +5,8 @@ $(function() {
     // need to acct for search not having a result
     // if array is empty
 
+    // preview text from the page, too
+
     var getData = function(title) {
     $.ajax({
     type: 'GET',
