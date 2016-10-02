@@ -1,9 +1,9 @@
 $(function() {
 
-    var getData = function() {
+    var getData = function(title) {
     $.ajax({
     type: 'GET',
-    url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&page=Jimi_Hendrix&callback=?",
+    url: "http://en.wikipedia.org/w/api.php?action=query&format=json&srsearch=" + title + "&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
@@ -27,5 +27,5 @@ $(function() {
 //     // console.log(jqXHR);
 //   });
 
-    getData()
+    getData("kurt warner")
 });
