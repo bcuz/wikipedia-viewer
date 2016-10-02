@@ -9,6 +9,10 @@ $(function() {
 
     var viewData = function(results) {
       for (item in results) {
+        console.log(results[item]);
+
+        // x.slice(25 + "wiki/".length)
+
         $("body").append("<p><a href='" + results[item] + "'>Link</a></p>")
       }
     }
