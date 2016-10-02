@@ -7,6 +7,12 @@ $(function() {
 
     // preview text from the page, too
 
+    var viewData = function(results) {
+      for (item in results) {
+        $("body").append("<p>" + results[item] + "</p>")
+      }
+    }
+
     var getData = function(title) {
     $.ajax({
     type: 'GET',
@@ -16,6 +22,8 @@ $(function() {
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             console.log(data[data.length - 1]);
+
+            viewData(data[data.length - 1])
         },
 })
 
