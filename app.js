@@ -9,7 +9,7 @@ $(function() {
 
     var viewData = function(results) {
       for (item in results) {
-        $("body").append("<p>" + results[item] + "</p>")
+        $("body").append("<p><a href='" + results[item] + "'>Link</a></p>")
       }
     }
 
