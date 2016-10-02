@@ -1,7 +1,9 @@
 $(function() {
 
     // random article easy
+
     // need to acct for search not having a result
+    // if array is empty
 
     var getData = function(title) {
     $.ajax({
