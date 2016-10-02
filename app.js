@@ -3,12 +3,12 @@ $(function() {
     var getData = function(title) {
     $.ajax({
     type: 'GET',
-    url: "http://en.wikipedia.org/w/api.php?action=query&format=json&srsearch=" + title + "&callback=?",
+    url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + title + "&limit=1&namespace=0&format=json&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            console.log(data);
+            console.log(data[data.length - 1]);
         },
 })
 
