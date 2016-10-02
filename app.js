@@ -26,5 +26,7 @@ $(function() {
     getData($("input").val())
     })
 
+    getData("kurt warner")
+
 
 });
