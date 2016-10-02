@@ -1,6 +1,18 @@
 $(function() {
 
-    // var getData = function()
+    var getData = function() {
+    $.ajax({
+    type: 'GET',
+    url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&page=Jimi_Hendrix&callback=?",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+            console.log(data);
+        },
+})
+
+    }
 
   //   var queryData = {
   //   action: "query",
@@ -8,24 +20,12 @@ $(function() {
   //   format: "json"
   // };
 
-    $.ajax({
-    type: 'GET',
-    url: "https://en.wikipedia.org/w/api.php",
-    data: {
-    action: "query",
-    // titles: "warner",
-    format: "json"
-  },
-    dataType: 'json',
-    // headers: { 'Api-User-Agent': 'Example/1.0' }
-    success: function( jsondata ){
-    console.log(( jsondata.result ));
-  }
-})
 //     .done(function(result){
 //     console.log(result);
 // })
 //   .fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 //     // console.log(jqXHR);
 //   });
+
+    getData()
 });
