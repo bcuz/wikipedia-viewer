@@ -1,5 +1,6 @@
 $(function() {
 
+    // random article easy
     // need to acct for search not having a result
 
     var getData = function(title) {
