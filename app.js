@@ -5,7 +5,7 @@ $(function() {
     var getData = function(title) {
     $.ajax({
     type: 'GET',
-    url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + title + "&limit=1&namespace=0&format=json&callback=?",
+    url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + title + "&limit=10&namespace=0&format=json&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json",
