@@ -17,5 +17,10 @@ $(function() {
 
     }
 
-    getData("kurt warner")
+    $("form").submit(function(e) {
+    e.preventDefault();
+    getData($("input").val())
+    })
+
+
 });
