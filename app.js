@@ -8,11 +8,11 @@ $(function() {
 
     var viewLink = function(item) {
 
-        var templatize = function(title) {
+        var templatize = function(snippet) {
             var result = $('.templates .pages').clone();
 
             var repElem = result.find("p");
-            repElem.text(title)
+            repElem.text(snippet)
 
             // var index_to_cut = title.indexOf("wiki/")
             // var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
@@ -33,9 +33,9 @@ $(function() {
     } else if (count === 3 ) {
         var desired_array = item;
         // console.log(desired_array);
-        for (title in desired_array) {
+        for (snippet in desired_array) {
 
-            templatize(desired_array[title])
+            templatize(desired_array[snippet])
 
 
         }
