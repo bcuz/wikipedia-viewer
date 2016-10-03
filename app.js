@@ -48,9 +48,6 @@ $(function() {
                 $('.results').append(done);
             }
 
-            // for (item in data[2]) {
-
-            // }
         },
 })
 
