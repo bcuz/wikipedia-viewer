@@ -9,7 +9,7 @@ $(function() {
 
     var viewData = function(results) {
       // var snippet_array = results[]
-      var link_array = results[2]
+      var link_array = results[3]
 
       for (item in link_array) {
 
@@ -32,7 +32,7 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-
+            console.log(data);
             viewData(data)
         },
 })
