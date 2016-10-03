@@ -72,12 +72,14 @@ $(function() {
 
     $("form").submit(function(e) {
     e.preventDefault();
-    $("div").html('')
+    $(".results").html('')
+    // now doesnt work when putting new data in hmm
+
     getData($("input").val())
 
     })
 
-    getData("kurt warner")
+    // getData("kurt warner")
 
 
 });
