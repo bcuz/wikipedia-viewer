@@ -13,6 +13,7 @@ $(function() {
         var index_to_cut = results[item].indexOf("wiki/")
 
         // might need non-replaced string for paragraph stuff
+        // link name not perfect
         var link_name = results[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
         $("div").append("<p><a href='" + results[item] + "'>" + link_name + "</a></p>")
