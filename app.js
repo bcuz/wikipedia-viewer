@@ -10,11 +10,15 @@ $(function() {
     var viewData = function(results) {
       var snippet_array = results[2]
       var link_array = results[3]
+        var result = $('.templates .answers').clone();
 
       for (item in link_array) {
 
         var index_to_cut = link_array[item].indexOf("wiki/")
 
+        var userElem = result.find(".user a");
+        userElem.attr('href', user.user.link)
+        userElem.text(user.user.display_name)
         // might need non-replaced string for paragraph stuff
         // link name not perfect
         // console.log(link_array[item].slice(index_to_cut + "wiki/".length));
@@ -36,10 +40,10 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            for (item in data[2]) {
-                console.log(data[2][item]);
+            for (item in data[3]) {
+                var done = viewData(data[3][item])
+                $('.results').append(done);
             }
-            viewData(data)
         },
 })
 
