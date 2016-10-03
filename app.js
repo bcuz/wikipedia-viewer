@@ -9,28 +9,27 @@ $(function() {
     var viewLink = function(item) {
         // here is where I need to pick the specific array i want to work with
 
-        // for (thing in thin) {
-        //     console.log(thin[thing]);
-        // }
 
         count += 1;
         // console.log(count);
         if (count === 4) {
             // why is only the last item showing up here
             // when they all show in the console
-        var result = $('.templates .pages').clone();
         var desired_array = item;
 
-        for (thing in desired_array) {
-            console.log(desired_array[thing]);
-            var index_to_cut = desired_array[thing].indexOf("wiki/")
-            var link_name = desired_array[thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        for (title in desired_array) {
+            var result = $('.templates .pages').clone();
+
+            console.log(desired_array[title]);
+            var index_to_cut = desired_array[title].indexOf("wiki/")
+            var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+            console.log(link_name);
             var userElem = result.find("a");
-            userElem.attr('href', desired_array[thing])
+            userElem.attr('href', desired_array[title])
             userElem.text(link_name)
 
+            return result;
         }
-      return result;
     }
         // console.log(thin);
 
@@ -58,9 +57,6 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            // the data being in different arrays makes things screwy
-            // Wrong
-
 
             for (item in data) {
                 // the goal here is to pass all the arrays tho
