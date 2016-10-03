@@ -7,15 +7,10 @@ $(function() {
         var count = 0;
 
     var viewLink = function(item) {
-        // here is where I need to pick the specific array i want to work with
 
         var templatize = function(title) {
             var result = $('.templates .pages').clone();
 
-            // hrm. but how to put on the other stuff?
-            // am i just back where i began?
-            // suppose i could find the necessary element that i need and add on to it.
-            // not entirely where i began because i have access to the other array
             var repElem = result.find("p");
             repElem.text(title)
 
@@ -33,8 +28,6 @@ $(function() {
         count += 1;
         // console.log(count);
         if (count === 4) {
-            // why is only the last item showing up here
-            // when they all show in the console
         var desired_array = item;
 
     } else if (count === 3 ) {
@@ -47,19 +40,6 @@ $(function() {
 
         }
     }
-        // console.log(thin);
-
-
-
-
-      //   }
-      //   // there's an array of titles
-
-
-
-
-
-        // link name not perfect
 
 
     }
