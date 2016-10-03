@@ -15,12 +15,15 @@ $(function() {
             // hrm. but how to put on the other stuff?
             // am i just back where i began?
             // suppose i could find the necessary element that i need and add on to it.
+            // not entirely where i began because i have access to the other array
+            var repElem = result.find("p");
+            repElem.text(title)
 
-            var index_to_cut = title.indexOf("wiki/")
-            var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-            var userElem = result.find("a");
-            userElem.attr('href', title)
-            userElem.text(link_name)
+            // var index_to_cut = title.indexOf("wiki/")
+            // var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+            // var userElem = result.find("a");
+            // userElem.attr('href', title)
+            // userElem.text(link_name)
 
             // should prolly be appended right here
             // it was returning, but
@@ -34,6 +37,9 @@ $(function() {
             // when they all show in the console
         var desired_array = item;
 
+    } else if (count === 3 ) {
+        var desired_array = item;
+        // console.log(desired_array);
         for (title in desired_array) {
 
             templatize(desired_array[title])
@@ -52,8 +58,7 @@ $(function() {
 
 
 
-        // var repElem = result.find(".reputation");
-        // repElem.text(user.user.reputation)
+
         // link name not perfect
 
 
