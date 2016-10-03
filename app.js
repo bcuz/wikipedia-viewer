@@ -15,6 +15,9 @@ $(function() {
         var userElem = result.find("a");
         userElem.attr('href', item)
         userElem.text(link_name)
+
+        var repElem = result.find(".reputation");
+        repElem.text(user.user.reputation)
         // link name not perfect
 
       return result;
