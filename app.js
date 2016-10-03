@@ -14,11 +14,7 @@ $(function() {
             var repElem = result.find("p");
             repElem.text(snippet)
 
-            // var index_to_cut = title.indexOf("wiki/")
-            // var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-            // var userElem = result.find("a");
-            // userElem.attr('href', title)
-            // userElem.text(link_name)
+
 
             // should prolly be appended right here
             // it was returning, but
@@ -30,11 +26,20 @@ $(function() {
         if (count === 4) {
         var desired_array = item;
 
+        // $(".pages:nth-child(1) a")
+        for (title in desired_array) {
+            var index_to_cut = desired_array[title].indexOf("wiki/")
+            var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+            console.log(link_name);
+            // var userElem = result.find("a");
+            // userElem.attr('href', title)
+            // userElem.text(link_name)
+        }
+
     } else if (count === 3 ) {
         var desired_array = item;
         // console.log(desired_array);
         for (snippet in desired_array) {
-
             templatize(desired_array[snippet])
 
 
