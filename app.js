@@ -14,10 +14,6 @@ $(function() {
             var repElem = result.find("p");
             repElem.text(snippet)
 
-
-
-            // should prolly be appended right here
-            // it was returning, but
             $('.results').append(result);
         }
 
