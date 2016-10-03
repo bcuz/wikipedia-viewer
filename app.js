@@ -15,11 +15,7 @@ $(function() {
         var userElem = result.find("a");
         userElem.attr('href', item)
         userElem.text(link_name)
-        // might need non-replaced string for paragraph stuff
         // link name not perfect
-        // console.log(item.slice(index_to_cut + "wiki/".length));
-
-      // }
 
       return result;
 
