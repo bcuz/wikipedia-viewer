@@ -13,20 +13,20 @@ $(function() {
         //     console.log(thin[thing]);
         // }
 
-        // now this might be being cloned too much
-
         count += 1;
         // console.log(count);
         if (count === 4) {
+            // why is only the last item showing up here
+            // when they all show in the console
         var result = $('.templates .pages').clone();
-        var thin = item;
+        var desired_array = item;
 
-        for (thing in thin) {
-            console.log(thin[thing]);
-            var index_to_cut = thin[thing].indexOf("wiki/")
-            var link_name = thin[thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        for (thing in desired_array) {
+            console.log(desired_array[thing]);
+            var index_to_cut = desired_array[thing].indexOf("wiki/")
+            var link_name = desired_array[thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
             var userElem = result.find("a");
-            userElem.attr('href', thin[thing])
+            userElem.attr('href', desired_array[thing])
             userElem.text(link_name)
 
         }
