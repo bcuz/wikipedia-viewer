@@ -15,7 +15,7 @@ $(function() {
         // might need non-replaced string for paragraph stuff
         var link_name = results[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
-        $("body").append("<p><a href='" + results[item] + "'>" + link_name + "</a></p>")
+        $("div").append("<p><a href='" + results[item] + "'>" + link_name + "</a></p>")
       }
     }
 
@@ -37,7 +37,9 @@ $(function() {
 
     $("form").submit(function(e) {
     e.preventDefault();
+    $("div").html('')
     getData($("input").val())
+
     })
 
     getData("1999 nfl season")
