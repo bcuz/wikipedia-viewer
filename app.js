@@ -9,12 +9,13 @@ $(function() {
     var viewLink = function(item) {
 
         var templatize = function(snippet) {
+
             var result = $('.templates .pages').clone();
-            console.log(result);
 
             var repElem = result.find("p");
             repElem.text(snippet)
 
+            // every time a new query happens that has a result, a result should be appended
             $('.results').append(result);
         }
 
@@ -34,6 +35,7 @@ $(function() {
             $(".pages:nth-child(" + track + ") a").attr('href', desired_array[title])
             track += 1;
         }
+        count = 0;
             // reverse this order yo
     } else if (count === 3 ) {
         var desired_array = item;
@@ -58,7 +60,7 @@ $(function() {
         success: function (data, textStatus, jqXHR) {
 
             for (item in data) {
-                console.log(data[item]);
+                // console.log(data[item]);
                 viewLink(data[item])
             }
 
@@ -72,13 +74,13 @@ $(function() {
 
     // this only deletes things when the submit button is pressed again
     $(".results").html('')
-    // now doesnt work when putting new data in hmm
 
+    // this is working correctly from standpoint of getting info
     getData($("input").val())
 
     })
 
-    // getData("kurt warner")
+    getData("kurt warner")
 
 
 });
