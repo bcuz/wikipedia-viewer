@@ -13,14 +13,15 @@ $(function() {
             var result = $('.templates .pages').clone();
 
             // it's all there... now its not being added to the page tho
-            console.log(title);
             var index_to_cut = title.indexOf("wiki/")
             var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
             var userElem = result.find("a");
             userElem.attr('href', title)
             userElem.text(link_name)
 
-            return result;
+            // should prolly be appended right here
+            // it was returning, but
+            $('.results').append(result);
         }
 
         count += 1;
@@ -73,8 +74,7 @@ $(function() {
                 // last one
                 // console.log(data[item]);
 
-                var done = viewLink(data[item])
-                $('.results').append(done);
+                viewLink(data[item])
             }
 
         },
