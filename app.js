@@ -31,6 +31,8 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
+            // the data being in different arrays makes things screwy
+
             for (item in data[3]) {
                 var done = viewData(data[3][item])
                 $('.results').append(done);
