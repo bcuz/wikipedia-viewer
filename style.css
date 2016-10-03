@@ -17,5 +17,9 @@ form {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  border: 1px solid #000;
+  border-left: 12px solid transparent;
+}
+
+.pages:hover {
+  border-left: 12px solid #eee;
 }
