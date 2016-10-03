@@ -25,12 +25,15 @@ $(function() {
         // console.log(count);
         if (count === 4) {
         var desired_array = item;
+        var track = 1;
 
-        // $(".pages:nth-child(1) a")
         for (title in desired_array) {
             var index_to_cut = desired_array[title].indexOf("wiki/")
             var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-            console.log(link_name);
+
+
+            $(".pages:nth-child(" + track + ") a").text(link_name)
+            track += 1;
             // var userElem = result.find("a");
             // userElem.attr('href', title)
             // userElem.text(link_name)
