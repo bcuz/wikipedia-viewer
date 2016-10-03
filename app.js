@@ -5,8 +5,6 @@ $(function() {
     // need to acct for search not having a result
     // if array is empty
 
-    // preview text from the page, too
-
     var viewData = function(item) {
       var link_array = item[3]
         var result = $('.templates .pages').clone();
