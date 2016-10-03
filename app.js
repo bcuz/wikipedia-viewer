@@ -10,6 +10,7 @@ $(function() {
 
         var templatize = function(snippet) {
             var result = $('.templates .pages').clone();
+            console.log(result);
 
             var repElem = result.find("p");
             repElem.text(snippet)
@@ -68,6 +69,8 @@ $(function() {
 
     $("form").submit(function(e) {
     e.preventDefault();
+
+    // this only deletes things when the submit button is pressed again
     $(".results").html('')
     // now doesnt work when putting new data in hmm
 
