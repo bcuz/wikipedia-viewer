@@ -38,7 +38,7 @@ $(function() {
             // userElem.attr('href', title)
             // userElem.text(link_name)
         }
-
+            // reverse this order yo
     } else if (count === 3 ) {
         var desired_array = item;
         // console.log(desired_array);
