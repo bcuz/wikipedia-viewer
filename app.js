@@ -6,7 +6,6 @@ $(function() {
     // if array is empty
 
     var viewData = function(item) {
-      var link_array = item[3]
         var result = $('.templates .pages').clone();
 
 
@@ -16,8 +15,8 @@ $(function() {
         userElem.attr('href', item)
         userElem.text(link_name)
 
-        var repElem = result.find(".reputation");
-        repElem.text(user.user.reputation)
+        // var repElem = result.find(".reputation");
+        // repElem.text(user.user.reputation)
         // link name not perfect
 
       return result;
