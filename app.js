@@ -1,5 +1,5 @@
 $(function() {
-
+    $("input[type='text']").val("");
     // random article easy
 
     // need to acct for search not having a result
