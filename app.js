@@ -1,6 +1,7 @@
 $(function() {
     $("input[type='text']").val("");
     // random article easy
+    // make the entire paragraph a link
 
     // need to acct for search not having a result
     // if array is empty
