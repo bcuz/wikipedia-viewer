@@ -62,14 +62,6 @@ $(function() {
         success: function (data, textStatus, jqXHR) {
 
             for (item in data) {
-                // the goal here is to pass all the arrays tho
-                // not just the array with the link info
-                // passing each array within the big array
-
-                // each time around its an array, but right now I just want the
-                // last one
-                // console.log(data[item]);
-
                 viewLink(data[item])
             }
 
