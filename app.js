@@ -42,8 +42,10 @@ $(function() {
             // the data being in different arrays makes things screwy
             // Wrong
 
-                console.log(data);
+
             for (item in data) {
+                // passing each array within the big array
+                console.log(data[item]);
                 var done = viewLink(data[item])
                 $('.results').append(done);
             }
