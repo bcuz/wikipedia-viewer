@@ -35,9 +35,6 @@ $(function() {
             $(".pages:nth-child(" + track + ") a").text(link_name)
             $(".pages:nth-child(" + track + ") a").attr('href', desired_array[title])
             track += 1;
-            // var userElem = result.find("a");
-            // userElem.attr('href', title)
-            // userElem.text(link_name)
         }
             // reverse this order yo
     } else if (count === 3 ) {
