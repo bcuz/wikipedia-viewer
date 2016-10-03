@@ -14,8 +14,6 @@ $(function() {
             var result = $('.templates .pages').clone();
 
             var repElem = result.find("a");
-            // seems like this should work
-            // following the same pattern
             repElem.text(snippet)
 
             $('.results').append(result);
