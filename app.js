@@ -9,6 +9,21 @@ $(function() {
     var viewLink = function(item) {
         // here is where I need to pick the specific array i want to work with
 
+        var templatize = function(title) {
+            var result = $('.templates .pages').clone();
+
+            console.log(title);
+            var index_to_cut = title.indexOf("wiki/")
+            var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+            var userElem = result.find("a");
+            userElem.attr('href', title)
+            userElem.text(link_name)
+
+            // this is ending the for loop after the first item
+            // in other projects it would make sense to return
+            // after each item, because then next time would go. A method perhaps?
+            return result;
+        }
 
         count += 1;
         // console.log(count);
@@ -18,20 +33,10 @@ $(function() {
         var desired_array = item;
 
         for (title in desired_array) {
-            var result = $('.templates .pages').clone();
 
-            console.log(desired_array[title]);
-            var index_to_cut = desired_array[title].indexOf("wiki/")
-            var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-            console.log(link_name);
-            var userElem = result.find("a");
-            userElem.attr('href', desired_array[title])
-            userElem.text(link_name)
+            templatize(desired_array[title])
 
-            // this is ending the for loop after the first item
-            // in other projects it would make sense to return
-            // after each item, because then next time would go. A method perhaps?
-            return result;
+
         }
     }
         // console.log(thin);
