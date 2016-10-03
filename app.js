@@ -12,6 +12,7 @@ $(function() {
         var templatize = function(title) {
             var result = $('.templates .pages').clone();
 
+            // it's all there... now its not being added to the page tho
             console.log(title);
             var index_to_cut = title.indexOf("wiki/")
             var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
@@ -19,9 +20,6 @@ $(function() {
             userElem.attr('href', title)
             userElem.text(link_name)
 
-            // this is ending the for loop after the first item
-            // in other projects it would make sense to return
-            // after each item, because then next time would go. A method perhaps?
             return result;
         }
 
