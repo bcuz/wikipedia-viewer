@@ -8,15 +8,18 @@ $(function() {
     // preview text from the page, too
 
     var viewData = function(results) {
-      for (item in results) {
+      var link_array = results[results.length - 1]
 
-        var index_to_cut = results[item].indexOf("wiki/")
+      for (item in link_array) {
+
+        var index_to_cut = link_array[item].indexOf("wiki/")
 
         // might need non-replaced string for paragraph stuff
         // link name not perfect
-        var link_name = results[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        console.log(link_array[item].slice(index_to_cut + "wiki/".length));
+        var link_name = link_array[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
-        $("div").append("<p><a href='" + results[item] + "'>" + link_name + "</a></p>")
+        $("div").append("<p><a href='" + link_array[item] + "'>" + link_name + "</a></p>")
       }
     }
 
@@ -28,9 +31,8 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            console.log(data[data.length - 1]);
 
-            viewData(data[data.length - 1])
+            viewData(data)
         },
 })
 
@@ -43,7 +45,7 @@ $(function() {
 
     })
 
-    getData("1999 nfl season")
+    getData("kurt warner")
 
 
 });
