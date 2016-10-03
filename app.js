@@ -4,7 +4,7 @@ $(function() {
 
     // need to acct for search not having a result
     // if array is empty
-        var count = 0;
+    var count = 0;
 
     var viewLink = function(item) {
 
