@@ -1,5 +1,6 @@
 $(function() {
     $("input[type='text']").val("");
+
     // random article easy
     // make the entire paragraph a link
 
@@ -78,15 +79,20 @@ $(function() {
     }
 
     $("form").submit(function(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    $(".results").html('')
 
     getData($("input").val())
 
     })
 
     // getData("kurt warner")
+
+    $("input[type='reset'").on("click", function(e) {
+    e.preventDefault();
+    // alert("ya")
+    $(".results").html('')
+  })
 
 
 });
