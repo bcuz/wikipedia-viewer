@@ -8,7 +8,8 @@ $(function() {
     // preview text from the page, too
 
     var viewData = function(results) {
-      var link_array = results[results.length - 1]
+      // var snippet_array = results[]
+      var link_array = results[2]
 
       for (item in link_array) {
 
