@@ -8,7 +8,7 @@ $(function() {
     // preview text from the page, too
 
     var viewData = function(results) {
-      // var snippet_array = results[]
+      var snippet_array = results[2]
       var link_array = results[3]
 
       for (item in link_array) {
@@ -17,10 +17,14 @@ $(function() {
 
         // might need non-replaced string for paragraph stuff
         // link name not perfect
-        console.log(link_array[item].slice(index_to_cut + "wiki/".length));
+        // console.log(link_array[item].slice(index_to_cut + "wiki/".length));
         var link_name = link_array[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
         $("div").append("<p><a href='" + link_array[item] + "'>" + link_name + "</a></p>")
+      }
+
+      for (item in snippet_array) {
+        // this is prolly where a template is a good thing
       }
     }
 
@@ -32,7 +36,9 @@ $(function() {
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            console.log(data);
+            for (item in data[2]) {
+                console.log(data[2][item]);
+            }
             viewData(data)
         },
 })
