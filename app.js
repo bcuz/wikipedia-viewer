@@ -29,14 +29,7 @@ $(function() {
         var track = 1;
 
         for (title in desired_array) {
-            // could just use the titles they give
-            // titles are the second thing, so they would form the template
 
-            // var index_to_cut = desired_array[title].indexOf("wiki/")
-            // var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-
-
-            // $(".pages:nth-child(" + track + ") a").text(link_name)
             $(".pages:nth-child(" + track + ") a").attr('href', desired_array[title])
             track += 1;
         }
