@@ -39,6 +39,10 @@ $(function() {
                 var done = viewData(data[3][item])
                 $('.results').append(done);
             }
+
+            for (item in data[2]) {
+
+            }
         },
 })
 
@@ -51,7 +55,7 @@ $(function() {
 
     })
 
-    getData("kurt warner")
+    // getData("kurt warner")
 
 
 });
