@@ -28,6 +28,9 @@ $(function() {
             userElem.attr('href', desired_array[title])
             userElem.text(link_name)
 
+            // this is ending the for loop after the first item
+            // in other projects it would make sense to return
+            // after each item, because then next time would go. A method perhaps?
             return result;
         }
     }
