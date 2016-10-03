@@ -12,6 +12,10 @@ $(function() {
         var templatize = function(title) {
             var result = $('.templates .pages').clone();
 
+            // hrm. but how to put on the other stuff?
+            // am i just back where i began?
+            // suppose i could find the necessary element that i need and add on to it.
+
             var index_to_cut = title.indexOf("wiki/")
             var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
             var userElem = result.find("a");
