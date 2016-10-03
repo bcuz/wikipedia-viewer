@@ -12,7 +12,6 @@ $(function() {
         var templatize = function(title) {
             var result = $('.templates .pages').clone();
 
-            // it's all there... now its not being added to the page tho
             var index_to_cut = title.indexOf("wiki/")
             var link_name = title.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
             var userElem = result.find("a");
