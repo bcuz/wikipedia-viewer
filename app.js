@@ -28,6 +28,7 @@ $(function() {
         var track = 1;
 
         for (title in desired_array) {
+            // could just use the titles they give
             var index_to_cut = desired_array[title].indexOf("wiki/")
             var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
