@@ -86,7 +86,7 @@ $(function() {
 
     })
 
-    // getData("kurt warner")
+    getData("kurt warner")
 
 
 });
