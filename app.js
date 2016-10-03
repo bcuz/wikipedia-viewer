@@ -7,29 +7,24 @@ $(function() {
 
     // preview text from the page, too
 
-    var viewData = function(results) {
-      var snippet_array = results[2]
-      var link_array = results[3]
-        var result = $('.templates .answers').clone();
+    var viewData = function(item) {
+      var link_array = item[3]
+        var result = $('.templates .pages').clone();
 
-      for (item in link_array) {
 
-        var index_to_cut = link_array[item].indexOf("wiki/")
-
-        var userElem = result.find(".user a");
-        userElem.attr('href', user.user.link)
-        userElem.text(user.user.display_name)
+        var index_to_cut = item.indexOf("wiki/")
+        var link_name = item.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        var userElem = result.find("a");
+        userElem.attr('href', item)
+        userElem.text(link_name)
         // might need non-replaced string for paragraph stuff
         // link name not perfect
-        // console.log(link_array[item].slice(index_to_cut + "wiki/".length));
-        var link_name = link_array[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        // console.log(item.slice(index_to_cut + "wiki/".length));
 
-        $("div").append("<p><a href='" + link_array[item] + "'>" + link_name + "</a></p>")
-      }
+      // }
 
-      for (item in snippet_array) {
-        // this is prolly where a template is a good thing
-      }
+      return result;
+
     }
 
     var getData = function(title) {
