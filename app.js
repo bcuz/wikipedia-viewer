@@ -28,6 +28,8 @@ $(function() {
 
         for (title in desired_array) {
             // could just use the titles they give
+            // titles are the second thing, so they would form the template
+
             var index_to_cut = desired_array[title].indexOf("wiki/")
             var link_name = desired_array[title].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
 
