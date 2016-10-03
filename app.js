@@ -8,6 +8,8 @@ $(function() {
 
     var viewLink = function(item) {
 
+
+        // dont necessarily need this funct
         var templatize = function(snippet) {
 
             var result = $('.templates .pages').clone();
@@ -59,7 +61,11 @@ $(function() {
         success: function (data, textStatus, jqXHR) {
 
             for (item in data) {
-                // console.log(data[item]);
+                if (data[item].length === 0) {
+                    alert("No results")
+                    break;
+                };
+                console.log(data[item]);
                 viewLink(data[item])
             }
 
