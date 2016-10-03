@@ -15,7 +15,6 @@ $(function() {
             var repElem = result.find("p");
             repElem.text(snippet)
 
-            // every time a new query happens that has a result, a result should be appended
             $('.results').append(result);
         }
 
@@ -72,10 +71,8 @@ $(function() {
     $("form").submit(function(e) {
     e.preventDefault();
 
-    // this only deletes things when the submit button is pressed again
     $(".results").html('')
 
-    // this is working correctly from standpoint of getting info
     getData($("input").val())
 
     })
