@@ -5,7 +5,7 @@ $(function() {
     // need to acct for search not having a result
     // if array is empty
 
-    var viewData = function(item) {
+    var viewLink = function(item) {
         var result = $('.templates .pages').clone();
 
 
@@ -36,7 +36,7 @@ $(function() {
             // the template WILL already be there
 
             for (item in data[3]) {
-                var done = viewData(data[3][item])
+                var done = viewLink(data[3][item])
                 $('.results').append(done);
             }
 
