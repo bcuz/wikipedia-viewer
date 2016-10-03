@@ -32,8 +32,7 @@ $(function() {
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
             // the data being in different arrays makes things screwy
-            // if its done after the cloning from step the first loop tho
-            // the template WILL already be there
+            // Wrong
 
             for (item in data[3]) {
                 var done = viewLink(data[3][item])
