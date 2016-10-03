@@ -6,7 +6,12 @@ body {
   display: none;
 }
 
+form {
+  margin-bottom: 1em;
+}
+
 .pages {
+  max-width: 900px;
   text-align: left;
   margin-bottom: 1em;
   margin-left: auto;
