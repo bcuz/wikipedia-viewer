@@ -9,11 +9,12 @@ $(function() {
 
     var viewData = function(results) {
       for (item in results) {
-        console.log(results[item]);
 
-        // x.slice(25 + "wiki/".length)
+        var index_to_cut = results[item].indexOf("wiki/")
 
-        $("body").append("<p><a href='" + results[item] + "'>Link</a></p>")
+        var link_name = results[item].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+
+        $("body").append("<p><a href='" + results[item] + "'>" + link_name + "</a></p>")
       }
     }
 
@@ -38,7 +39,7 @@ $(function() {
     getData($("input").val())
     })
 
-    getData("kurt warner")
+    getData("1999 nfl season")
 
 
 });
