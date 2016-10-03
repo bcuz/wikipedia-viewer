@@ -11,7 +11,6 @@ $(function() {
 
         // dont necessarily need this funct
         var templatize = function(snippet) {
-            console.log(snippet);
             var result = $('.templates .pages').clone();
 
             var repElem = result.find("a");
@@ -37,11 +36,14 @@ $(function() {
             // reverse this order yo
     } else if (count === 3 ) {
         var desired_array = item;
-        // for (snippet in desired_array) {
-        //     templatize(desired_array[snippet])
+        var track = 1;
+
+        for (snippet in desired_array) {
+            $(".pages:nth-child(" + track + ") p").text(desired_array[snippet])
+            track += 1;
 
 
-        // }
+        }
     } else if (count === 2) {
         var desired_array = item;
 
