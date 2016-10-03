@@ -5,3 +5,13 @@ body {
 .hidden {
   display: none;
 }
+
+.pages {
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  /*max-width: 500px;*/
+}

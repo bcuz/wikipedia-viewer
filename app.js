@@ -61,6 +61,7 @@ $(function() {
         success: function (data, textStatus, jqXHR) {
 
             for (item in data) {
+                console.log(data[item]);
                 viewLink(data[item])
             }
 
