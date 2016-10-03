@@ -6,20 +6,28 @@ $(function() {
     // if array is empty
 
     var viewLink = function(item) {
+        // console.log(item);
         var result = $('.templates .pages').clone();
 
-
-        var index_to_cut = item.indexOf("wiki/")
-        var link_name = item.slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+        for (thing in item[3]) {
+        var index_to_cut = item[3][thing].indexOf("wiki/")
+        var link_name = item[3][thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
         var userElem = result.find("a");
-        userElem.attr('href', item)
+        userElem.attr('href', item[3][thing])
         userElem.text(link_name)
+
+
+        }
+        // there's an array of titles
+
+      return result;
+
+
 
         // var repElem = result.find(".reputation");
         // repElem.text(user.user.reputation)
         // link name not perfect
 
-      return result;
 
     }
 
@@ -34,14 +42,15 @@ $(function() {
             // the data being in different arrays makes things screwy
             // Wrong
 
-            for (item in data[3]) {
-                var done = viewLink(data[3][item])
+                console.log(data);
+            for (item in data) {
+                var done = viewLink(data[item])
                 $('.results').append(done);
             }
 
-            for (item in data[2]) {
+            // for (item in data[2]) {
 
-            }
+            // }
         },
 })
 
@@ -54,7 +63,7 @@ $(function() {
 
     })
 
-    // getData("kurt warner")
+    getData("kurt warner")
 
 
 });
