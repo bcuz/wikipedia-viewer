@@ -11,10 +11,12 @@ $(function() {
 
         // dont necessarily need this funct
         var templatize = function(snippet) {
-
+            console.log(snippet);
             var result = $('.templates .pages').clone();
 
-            var repElem = result.find("p");
+            var repElem = result.find("a");
+            // seems like this should work
+            // following the same pattern
             repElem.text(snippet)
 
             $('.results').append(result);
@@ -42,11 +44,16 @@ $(function() {
             // reverse this order yo
     } else if (count === 3 ) {
         var desired_array = item;
-        // console.log(desired_array);
-        for (snippet in desired_array) {
-            templatize(desired_array[snippet])
+        // for (snippet in desired_array) {
+        //     templatize(desired_array[snippet])
 
 
+        // }
+    } else if (count === 2) {
+        var desired_array = item;
+
+        for (title in desired_array) {
+            templatize(desired_array[title])
         }
     }
 
@@ -67,7 +74,7 @@ $(function() {
                     alert("No results")
                     break;
                 };
-                console.log(data[item]);
+                // console.log(data[item]);
                 viewLink(data[item])
             }
 
