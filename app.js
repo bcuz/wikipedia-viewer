@@ -4,23 +4,42 @@ $(function() {
 
     // need to acct for search not having a result
     // if array is empty
+        var count = 0;
 
     var viewLink = function(item) {
-        // console.log(item);
+        // here is where I need to pick the specific array i want to work with
+
+        // for (thing in thin) {
+        //     console.log(thin[thing]);
+        // }
+
+        // now this might be being cloned too much
+
+        count += 1;
+        // console.log(count);
+        if (count === 4) {
         var result = $('.templates .pages').clone();
+        var thin = item;
 
-        for (thing in item[3]) {
-        var index_to_cut = item[3][thing].indexOf("wiki/")
-        var link_name = item[3][thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
-        var userElem = result.find("a");
-        userElem.attr('href', item[3][thing])
-        userElem.text(link_name)
-
+        for (thing in thin) {
+            console.log(thin[thing]);
+            var index_to_cut = thin[thing].indexOf("wiki/")
+            var link_name = thin[thing].slice(index_to_cut + "wiki/".length).replace(/_/g, " ")
+            var userElem = result.find("a");
+            userElem.attr('href', thin[thing])
+            userElem.text(link_name)
 
         }
-        // there's an array of titles
-
       return result;
+    }
+        // console.log(thin);
+
+
+
+
+      //   }
+      //   // there's an array of titles
+
 
 
 
@@ -44,8 +63,14 @@ $(function() {
 
 
             for (item in data) {
+                // the goal here is to pass all the arrays tho
+                // not just the array with the link info
                 // passing each array within the big array
-                console.log(data[item]);
+
+                // each time around its an array, but right now I just want the
+                // last one
+                // console.log(data[item]);
+
                 var done = viewLink(data[item])
                 $('.results').append(done);
             }
