@@ -80,7 +80,7 @@ $(function() {
 
     $("form").submit(function(e) {
         e.preventDefault();
-
+        $(".results").html('')
 
     getData($("input").val())
 
