@@ -90,7 +90,7 @@ $(function() {
 
     $("input[type='reset'").on("click", function(e) {
     e.preventDefault();
-    // alert("ya")
+    $("input[type='text']").val("");
     $(".results").html('')
   })
 
