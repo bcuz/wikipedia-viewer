@@ -21,8 +21,7 @@ form {
   max-width: 900px;
   text-align: left;
   margin-bottom: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1em;
   padding: 20px;
   border-left: 12px solid transparent;
 }
@@ -41,4 +40,13 @@ input[type="reset"] {
   display: inline-block;
 }
 
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* remember to change max/min 1024 */
+  .pages {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
