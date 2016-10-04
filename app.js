@@ -8,7 +8,8 @@ $(function() {
     var count = 0;
 
     var viewLink = function(item) {
-
+        // prolly be better to save a popped variable
+        // and iterate through that
 
         // dont necessarily need this funct
         var templatize = function(snippet) {
