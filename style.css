@@ -1,6 +1,11 @@
 body {
   text-align: center;
-  background-color: lightblue;
+  background-color: #4cc6ef;
+}
+
+p a {
+  color: #000;
+  text-decoration: underline;
 }
 
 input[type='text'] {
