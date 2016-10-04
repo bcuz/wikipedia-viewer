@@ -32,7 +32,7 @@ $(function() {
             track += 1;
         }
         count = 0;
-            // reverse this order yo
+            // reverse this order
     } else if (count === 3 ) {
         var desired_array = item;
         var track = 1;
