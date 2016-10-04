@@ -3,12 +3,17 @@ body {
   background-color: lightblue;
 }
 
+input[type='text'] {
+  display: inline;
+  width: auto;
+}
+
 .hidden {
   display: none;
 }
 
 form {
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .pages {
