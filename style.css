@@ -31,19 +31,14 @@ form {
   border-left: 12px solid #0d0d71;
 }
 
-.btn {
-    margin-top: 0.5em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+input[type="reset"] {
+  display: none;
+}
 
 @media screen and (min-width: 700px) {
   /* remember to change max/min 1024 */
-  /*should at least show up somehwere*/
-  .btn {
-    display: inline-block;
-    margin: 0;
-  }
+  input[type="reset"] {
+  display: inline-block;
+}
 
 }
