@@ -1,6 +1,10 @@
 body {
   text-align: center;
-  background-color: #4cc6ef;
+  background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
 }
 
 p a {
@@ -32,7 +36,7 @@ form {
 }
 
 .pages:hover {
-  border-left: 12px solid #0d0d71;
+  border-left: 12px solid #ABCED4;
 }
 
 input[type="reset"] {
